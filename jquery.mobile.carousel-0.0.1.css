@@ -1,0 +1,28 @@
+
+ul.ui-mobile-carousel {
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.ui-mobile-carousel li {
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+}
+
+.ui-mobile-carousel li img {
+    position: absolute;
+}
+
+div.ui-mobile-carousel-content {
+    position: relative;
+}
+
+.ui-mobile-carousel-content-paging {
+    position: relative;
+    bottom: 100px;
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Mobile Carousel Plugin: Demo</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.css"></link>
+    <link rel="stylesheet" href="jquery.mobile.carousel-0.0.1.css"></link>
+    <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>
+    <script src="jquery.mobile.carousel-0.0.1.js"></script>
+    <script>
+      $(function(){
+          $(".mobile-carousel").mobile_carousel();
+      });
+    </script>
+  </head>
+  <body>
+    <div data-role="page" id="home">
+
+      <div data-role="header">
+        <h1>jQuery Mobile Carousel Plugin: Demo</h1>
+      </div>
+
+      <div data-role="content">
+	<h1>screen shots</h1>
+	<ul class="mobile-carousel">
+	  <li><img src="./example-staticfiles/1.png" /></li>
+	  <li><img src="./example-staticfiles/2.png" /></li>
+	  <li><img src="./example-staticfiles/3.png" /></li>
+	</ul>
+      </div>
+
+    </div>
+  </body>
+</html>

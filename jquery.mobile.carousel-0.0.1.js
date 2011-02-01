@@ -7,6 +7,9 @@
 	var name_space = 'mobile_carousel';
 
 	$.fn[name_space] = function() {
+		if (this.data("__attached") === "true") {
+			return;
+		}
 
 		// change style
 		this.addClass("ui-mobile-carousel");
@@ -222,7 +225,7 @@
 			});
 		});
 
-
+		this.data("__attached", "true");
 		return this;
 	};
 

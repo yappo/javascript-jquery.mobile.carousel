@@ -70,7 +70,16 @@
 					initialize_cb();
 				}
 			};
-			images.load(count_cb).error(count_cb);
+			images.each(function(){
+				if ($(this).width() > 0) {
+					loaded_count++;
+				}
+			});
+			if (images.length === loaded_count) {
+				initialize_cb();
+			} else {
+				images.load(count_cb).error(count_cb);
+			}
 
 			// paging setting
 			var currentIndex = 1;

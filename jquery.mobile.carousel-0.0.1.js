@@ -18,20 +18,18 @@
 		var content_width = window_width - margin_width;
 		var left_base     = -15 + (margin_width / 2);
 
-		// wrapping contents div
 		this.each(function(){
-			var content = $("<DIV/>")
-				.addClass("ui-mobile-carousel-content");
-			var ul = $(this);
-			ul.wrap(content);
-		});
-
-		$(this.selector).parent().each(function(){
 			var content_paging = $("<DIV/>")
 				.addClass("ui-mobile-carousel-content-paging");
-			var content = $(this)
-				.append(content_paging);
-			var ul = content.find("ul");
+
+			// wrapping contents div
+			var content = $("<DIV/>")
+				.addClass("ui-mobile-carousel-content");
+			var ul = $(this)
+				.before(content);
+			ul.appendTo(content);
+			content.append(content_paging);
+
 			ul.height(window_height);
 
 			var elements = ul.find("li");
